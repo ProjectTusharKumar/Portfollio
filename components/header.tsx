@@ -9,7 +9,7 @@ import { useTheme } from "next-themes";
 const navItems = ["Home", "About", "Skills", "Portfolio", "Contact"];
 
 export default function Header() {
-  const { theme, setTheme, resolvedTheme } = useTheme();
+  const { setTheme, resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => setMounted(true), []);
