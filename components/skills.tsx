@@ -16,7 +16,7 @@ const skills = [
   { name: "BootStrap", image: "https://raw.githubusercontent.com/ProjectTusharKumar/svg/refs/heads/main/bootstrap.svg" },
   { name: "Taildwind Css", image: "https://raw.githubusercontent.com/ProjectTusharKumar/svg/refs/heads/main/.svg" },
   { name: "JavaScript", image: "https://raw.githubusercontent.com/ProjectTusharKumar/svg/refs/heads/main/javascript.svg" },
-  { name: "JWT", image: "https://raw.githubusercontent.com/ProjectTusharKumar/svg/refs/heads/main/jwtt.svg" },
+  { name: "JWT", image: "https://raw.githubusercontent.com/ProjectTusharKumar/svg/refs/heads/main/jwt.svg" },
   { name: "RESTful API", image: "https://raw.githubusercontent.com/ProjectTusharKumar/svg/refs/heads/main/api.svg" },
   { name: "Python", image: "https://raw.githubusercontent.com/ProjectTusharKumar/svg/refs/heads/main/python.svg" },
   { name: "Django", image: "https://raw.githubusercontent.com/ProjectTusharKumar/svg/refs/heads/main/django.svg" },
@@ -33,7 +33,7 @@ const tools = [
   { name: "ChatGPT", image: "https://raw.githubusercontent.com/ProjectTusharKumar/svg/refs/heads/main/chatgpt.svg" },
   { name: "AWS", image: "https://raw.githubusercontent.com/ProjectTusharKumar/svg/refs/heads/main/aws.svg" },
   { name: "Hugging Face", image: "https://raw.githubusercontent.com/ProjectTusharKumar/svg/refs/heads/main/huggingface.svg" },
-  { name: "Docker", image: "https://raw.githubusercontent.com/ProjectTusharKumar/svg/refs/heads/main/dockervg" },
+  { name: "Docker", image: "https://raw.githubusercontent.com/ProjectTusharKumar/svg/refs/heads/main/docker.svg" },
 ]
 
 
