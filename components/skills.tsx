@@ -8,8 +8,14 @@ import Image from "next/image"
 const GITHUB_BASE_URL = "https://raw.githubusercontent.com/ProjectTusharKumar/svg/refs/heads/main/"
 const LOCAL_BASE_URL = "/images/"
 
+// Define skill and tool types
+interface SkillTool {
+  name: string;
+  image: string;
+}
+
 // Skills and Tools Data
-const skills = [
+const skills: SkillTool[] = [
   { name: "ReactJs", image: "reactjs.png" },
   { name: "NodeJs", image: "node.png" },
   { name: "MongoDB", image: "mongodb.png" },
@@ -27,7 +33,7 @@ const skills = [
   { name: "My SQL", image: "mysql.png" },
 ]
 
-const tools = [
+const tools: SkillTool[] = [
   { name: "Git", image: "git.png" },
   { name: "GitHub", image: "github.png" },
   { name: "Postman", image: "postman.png" },
@@ -41,17 +47,17 @@ const tools = [
 
 // Component
 export default function Skills() {
-  const [showSkills, setShowSkills] = useState(true)
-  const [fallbackImages, setFallbackImages] = useState({}) // Track failed images
+  const [showSkills, setShowSkills] = useState<boolean>(true)
+  const [fallbackImages, setFallbackImages] = useState<Record<string, boolean>>({}) // Track failed images
 
-  // Function to determine image source with fallback
-  const getImageSrc = (imageName) => {
+  // ✅ Define `imageName` as `string`
+  const getImageSrc = (imageName: string): string => {
     if (!imageName) return "/images/placeholder.png" // Default placeholder
     return fallbackImages[imageName] ? LOCAL_BASE_URL + imageName : GITHUB_BASE_URL + imageName
   }
 
-  // Function to handle failed image loads
-  const handleError = (imageName) => {
+  // ✅ Define `imageName` as `string`
+  const handleError = (imageName: string) => {
     setFallbackImages((prev) => ({ ...prev, [imageName]: true }))
   }
 
