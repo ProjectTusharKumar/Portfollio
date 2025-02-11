@@ -17,7 +17,7 @@ const skills = [
   { name: "Taildwind Css", image: "/images/tailwind.svg" },
   { name: "JavaScript", image: "/images/javascript.svg" },
   { name: "JWT", image: "/images/jwt.svg" },
-  { name: "RESTful API", image: "/images/api.svg" },
+  { name: "RESTful API", image: "https://gist.githubusercontent.com/ProjectTusharKumar/2d8317ca7d9626dc9ddc1e9799aee01e/raw/3ff402ecf68a1819bc0503be4ec9909921bb2f79/api" },
   { name: "Python", image: "/images/python.svg" },
   { name: "Django", image: "/images/django.svg" },
   { name: "My SQL", image: "/images/mysql.svg" },
