@@ -22,7 +22,7 @@ export default function Hero() {
         </div>
         <div className="relative order-first lg:order-last">
           <Image
-            src="/images/first_img.png"
+            src="https://raw.githubusercontent.com/ProjectTusharKumar/svg/refs/heads/main/first_img.png"
             alt="Hero image"
             className="w-full h-auto max-w-[500px] mx-auto"
             width={600}
