@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button"
+import RotatingText from '@/components/framotion/rotatingtext'
 import { Facebook, Twitter, Linkedin } from "lucide-react"
 import Image from "next/image"
 
@@ -9,7 +10,19 @@ export default function Hero() {
       <div className="container grid gap-8 lg:grid-cols-2 items-center">
         <div className="space-y-4 text-center lg:text-left">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl">
-            We Design & Build Creative Products
+            We Design & Build Creative <span className="inline-block">
+              <RotatingText
+                 texts={['React', 'Products', 'Animations', 'Cool!']}
+                 mainClassName="px-2 sm:px-2 md:px-3 overflow-hidden py-0.5 sm:py-1 md:py-2 rounded-lg"
+                 staggerFrom={"last"}
+                 initial={{ y: "100%" }}
+                 animate={{ y: 0 }}
+                 exit={{ y: "-120%" }}
+                 staggerDuration={0.025}
+                 splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
+                 transition={{ type: "spring", damping: 30, stiffness: 400 }}
+                 rotationInterval={2000}/> 
+                 </span>
           </h2>
           <p className="text-muted-foreground max-w-[600px] mx-auto lg:mx-0">
             Transforming ideas into digital realities with innovative solutions and cutting-edge technologies.

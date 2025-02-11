@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
 
@@ -25,7 +27,11 @@ export default function About() {
             </p>
             <div className="flex gap-4 justify-center lg:justify-start">
               <Button className="cursor-default">Hire me</Button>
-              <Button variant="outline" className="cursor-default">
+              <Button
+                variant="outline"
+                className="cursor-default"
+                onClick={() => window.open("https://raw.githubusercontent.com/ProjectTusharKumar/svg/refs/heads/main/Tushar_Resume.pdf", "_blank")}
+              >
                 Download CV
               </Button>
             </div>

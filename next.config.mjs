@@ -5,6 +5,10 @@ const nextConfig = {
         protocol: "https",
         hostname: "gist.githubusercontent.com",
       },
+      {
+        protocol: "https",
+        hostname: "raw.githubusercontent.com",
+      },
     ],
     dangerouslyAllowSVG: true,
   },
