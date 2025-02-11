@@ -5,61 +5,39 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
 
-const GITHUB_BASE_URL = "https://raw.githubusercontent.com/ProjectTusharKumar/svg/refs/heads/main/"
-const LOCAL_BASE_URL = "/images/"
-
-// Define skill and tool types
-interface SkillTool {
-  name: string;
-  image: string;
-}
-
-// Skills and Tools Data
-const skills: SkillTool[] = [
-  { name: "ReactJs", image: "reactjs.png" },
-  { name: "NodeJs", image: "node.png" },
-  { name: "MongoDB", image: "mongodb.png" },
-  { name: "Express.js", image: "express.png" },
-  { name: "Redux", image: "redux.png" },
-  { name: "TypeScript", image: "typescript.png" },
-  { name: "HTML5", image: "html5.png" },
-  { name: "BootStrap", image: "bootstrap.png" },
-  { name: "Tailwind Css", image: "tailwind.png" },
-  { name: "JavaScript", image: "javascript.png" },
-  { name: "JWT", image: "jwt.png" },
-  { name: "RESTful API", image: "restapi.png" },
-  { name: "Python", image: "python.png" },
-  { name: "Django", image: "django.png" },
-  { name: "My SQL", image: "mysql.png" },
+const skills = [
+  { name: "ReactJs", image: "" },
+  { name: "NodeJs", image: "" },
+  { name: "MongoDB", image: "" },
+  { name: "Express.js", image: "" },
+  { name: "Redux", image: "" },
+  { name: "TypeScript", image: "" },
+  { name: "HTML5", image: "" },
+  { name: "BootStrap", image: "" },
+  { name: "Taildwind Css", image: "" },
+  { name: "JavaScript", image: "" },
+  { name: "JWT", image: "" },
+  { name: "RESTful API", image: "https://raw.githubusercontent.com/ProjectTusharKumar/svg/refs/heads/main/api.svg" },
+  { name: "Python", image: "" },
+  { name: "Django", image: "" },
+  { name: "My SQL", image: "" },
 ]
 
-const tools: SkillTool[] = [
-  { name: "Git", image: "git.png" },
-  { name: "GitHub", image: "github.png" },
-  { name: "Postman", image: "postman.png" },
-  { name: "VS Code", image: "vscode.png" },
-  { name: "NextJS", image: "nextjs.png" },
-  { name: "npm", image: "npm.png" },
-  { name: "ChatGPT", image: "chatgpt.png" },
-  { name: "AWS", image: "aws.png" },
-  { name: "Hugging Face", image: "huggingface.png" },
+const tools = [
+  { name: "Git", image: "" },
+  { name: "GitHub", image: "" },
+  { name: "Postman", image: "" },
+  { name: "VS Code", image: "https://res.cloudinary.com/drjnfwe6v/image/upload/v1739255422/tushar/vscode.svg" },
+  { name: "NextJS", image: "" },
+  { name: "npm", image: "" },
+  { name: "ChatGPT", image: "" },
+  { name: "AWS", image: "" },
+  { name: "Hugging Face", image: "" },
 ]
 
-// Component
+
 export default function Skills() {
-  const [showSkills, setShowSkills] = useState<boolean>(true)
-  const [fallbackImages, setFallbackImages] = useState<Record<string, boolean>>({}) // Track failed images
-
-  // ✅ Define `imageName` as `string`
-  const getImageSrc = (imageName: string): string => {
-    if (!imageName) return "/images/placeholder.png" // Default placeholder
-    return fallbackImages[imageName] ? LOCAL_BASE_URL + imageName : GITHUB_BASE_URL + imageName
-  }
-
-  // ✅ Define `imageName` as `string`
-  const handleError = (imageName: string) => {
-    setFallbackImages((prev) => ({ ...prev, [imageName]: true }))
-  }
+  const [showSkills, setShowSkills] = useState(true)
 
   return (
     <section id="skills" className="py-12 sm:py-24 bg-secondary">
@@ -80,14 +58,7 @@ export default function Skills() {
           {(showSkills ? skills : tools).map((item, index) => (
             <Card key={index}>
               <CardContent className="flex flex-col items-center justify-center p-4">
-                <Image
-                  src={getImageSrc(item.image)}
-                  alt={item.name}
-                  width={48}
-                  height={48}
-                  className="mb-2 w-12 h-12 object-contain"
-                  onError={() => handleError(item.image)}
-                />
+                <Image src={item.image || "/images/placeholder"} alt={item.name} width={48} height={48} className="mb-2 w-12 h-12 object-contain" />
                 <span className="text-sm sm:text-base font-medium text-center">{item.name}</span>
               </CardContent>
             </Card>
