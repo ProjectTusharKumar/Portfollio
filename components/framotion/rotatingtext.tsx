@@ -1,5 +1,4 @@
 'use client'
-
 import React, {
     forwardRef,
     useCallback,
@@ -8,7 +7,7 @@ import React, {
     useMemo,
     useState,
   } from "react";
-  import { motion, AnimatePresence, Transition } from "framer-motion";
+  import { motion, AnimatePresence,TargetAndTransition, VariantLabels, Transition } from "framer-motion";
   
   function cn(...classes: (string | undefined | null | boolean)[]): string {
     return classes.filter(Boolean).join(" ");
@@ -28,9 +27,9 @@ import React, {
     > {
     texts: string[];
     transition?: Transition;
-    initial?: any;
-    animate?: any;
-    exit?: any;
+    initial?: VariantLabels | TargetAndTransition | undefined;
+  animate?: VariantLabels | TargetAndTransition | undefined;
+  exit?: VariantLabels | TargetAndTransition | undefined;
     animatePresenceMode?: "sync" | "wait";
     animatePresenceInitial?: boolean;
     rotationInterval?: number;
