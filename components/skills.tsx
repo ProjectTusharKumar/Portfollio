@@ -67,7 +67,6 @@ export default function Skills() {
           pauseOnHover={true}
           size="clamp(16rem, 1rem + 15vmin, 22rem)"
           duration="40s"
-          objectFit="contain"
         />
            </div>
     </section>

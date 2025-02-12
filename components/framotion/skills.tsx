@@ -55,9 +55,9 @@ const LogoWall: FC<LogoWallProps> = ({
     <article
       className={wrapperClass}
       style={{
-        "--size": size as string,
-        "--duration": duration as string,
-      }}
+        "--size": size,
+        "--duration": duration,
+      } as React.CSSProperties}
     >
       <div
         className={marqueeClass}
