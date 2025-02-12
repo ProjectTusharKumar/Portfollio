@@ -1,9 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import Image from "next/image"
 import LogoWall from "@/components/framotion/skills"
 
 
@@ -69,6 +67,7 @@ export default function Skills() {
           pauseOnHover={true}
           size="clamp(16rem, 1rem + 15vmin, 22rem)"
           duration="40s"
+          objectFit="contain"
         />
            </div>
     </section>

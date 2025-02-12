@@ -6,6 +6,7 @@ module.exports = {
     container: {
       center: true,
       padding: "2rem",
+      DEFAULT: "hsl(var(--background))",
       screens: {
         "2xl": "1400px",
       },
@@ -15,35 +16,45 @@ module.exports = {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
+        background: {
+          DEFAULT: "hsl(var(--background))",
+          dark: "#000000", // Set background to black in dark mode
+        },
         foreground: "hsl(var(--foreground))",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+          dark: "#000000", // Set primary background to black in dark mode
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
+          dark: "#000000", // Set secondary background to black in dark mode
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",
+          dark: "#000000", // Set destructive background to black in dark mode
         },
         muted: {
           DEFAULT: "hsl(var(--muted))",
           foreground: "hsl(var(--muted-foreground))",
+          dark: "#000000", // Set muted background to black in dark mode
         },
         accent: {
           DEFAULT: "hsl(var(--accent))",
           foreground: "hsl(var(--accent-foreground))",
+          dark: "#000000", // Set accent background to black in dark mode
         },
         popover: {
           DEFAULT: "hsl(var(--popover))",
           foreground: "hsl(var(--popover-foreground))",
+          dark: "#000000", // Set popover background to black in dark mode
         },
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
+          dark: "#000000", // Set card background to black in dark mode
         },
       },
       borderRadius: {

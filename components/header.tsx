@@ -16,7 +16,6 @@ export default function Header() {
       <div className="container flex h-16 items-center justify-between">
         <h1 className="text-xl sm:text-2xl font-bold">
           <a href="#" className="cursor-default flex items-center">
-            <Image src="/images/logo.jpg" alt="Tushar Kumar" width={40} height={40} className="mr-2 rounded-full" />
             Tushar<span className="text-primary">.</span>
           </a>
         </h1>

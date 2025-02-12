@@ -1,10 +1,10 @@
 import React, { useState, FC } from "react";
+import Image from "next/image";
 
 interface LogoItem {
   name: string;
   imgUrl: string;
   altText: string;
-
 }
 
 interface LogoWallProps {
@@ -13,20 +13,14 @@ interface LogoWallProps {
   pauseOnHover?: boolean;
   size?: string;
   duration?: string;
-  textColor?: string;
-  bgColor?: string;
-  bgAccentColor?: string;
 }
 
 const LogoWall: FC<LogoWallProps> = ({
   items = [],
   direction = "horizontal",
   pauseOnHover = false,
-  size = "clamp(8rem, 1rem + 30vmin, 25rem)",
-  duration = "60s",
-  textColor = "#ffffff",
-  bgColor = "#060606",
-  bgAccentColor = "#111111",
+  size = "clamp(21rem, 1rem + 30vmin, 25rem)",
+  duration = "40s",
 }) => {
   const [isPaused, setIsPaused] = useState(false);
 
@@ -61,13 +55,8 @@ const LogoWall: FC<LogoWallProps> = ({
     <article
       className={wrapperClass}
       style={{
-        ["--size" as any]: size,
-        ["--duration" as any]: duration,
-        ["--color-text" as any]: textColor,
-        ["--color-bg" as any]: bgColor,
-        ["--color-bg-accent" as any]: bgAccentColor,
-        color: "var(--color-text)",
-        backgroundColor: "var(--color-bg)",
+        "--size": size as string,
+        "--duration": duration as string,
       }}
     >
       <div
@@ -90,23 +79,16 @@ const LogoWall: FC<LogoWallProps> = ({
             .join(" ")}
         >
           {items.map((item, idx) => (
-            <img
-              key={idx}
+            <div key={idx} className="flex flex-col items-center">
+            <Image
               src={item.imgUrl}
               alt={item.altText}
-              className={[
-                "bg-[var(--color-bg-accent)]",
-                "rounded-md",
-                "object-contain",
-                "aspect-video",
-                "w-[var(--size)]",
-                "p-[calc(var(--size)/10)]",
-                direction === "vertical" &&
-                  "aspect-square w-[calc(var(--size)/1.5)] p-[calc(var(--size)/6)]",
-              ]
-                .filter(Boolean)
-                .join(" ")}
+              width={500}
+              height={300}
+              className="bg-[var(--color-bg-accent)] rounded-md object-contain aspect-video w-[var(--size)] p-[calc(var(--size)/10)]"
             />
+            <p className="mt-2 text-center text-sm font-medium">{item.name}</p>
+          </div>
           ))}
         </div>
         <div
@@ -125,92 +107,13 @@ const LogoWall: FC<LogoWallProps> = ({
             .join(" ")}
         >
           {items.map((item, idx) => (
-            <img
+            <Image
               key={`dup1-${idx}`}
               src={item.imgUrl}
               alt={item.altText}
+              width={500}
+              height={300}
               className={[
-                "bg-[var(--color-bg-accent)]",
-                "rounded-md",
-                "object-contain",
-                "aspect-video",
-                "w-[var(--size)]",
-                "p-[calc(var(--size)/10)]",
-                direction === "vertical" &&
-                  "aspect-square w-[calc(var(--size)/1.5)] p-[calc(var(--size)/6)]",
-              ]
-                .filter(Boolean)
-                .join(" ")}
-            />
-          ))}
-        </div>
-      </div>
-
-      <div
-        className={marqueeClass + " marquee--reverse"}
-        onMouseEnter={() => pauseOnHover && setIsPaused(true)}
-        onMouseLeave={() => pauseOnHover && setIsPaused(false)}
-      >
-        <div
-          className={[
-            "flex-shrink-0",
-            "flex",
-            "items-center",
-            "justify-around",
-            "gap-[calc(var(--size)/14)]",
-            "min-w-full",
-            "animate-scrollX",
-            "reverse-x",
-            direction === "vertical" &&
-              "flex-col min-h-full animate-scrollY reverse-x",
-          ]
-            .filter(Boolean)
-            .join(" ")}
-        >
-          {items.map((item, idx) => (
-            <img
-              key={`rev-${idx}`}
-              src={item.imgUrl}
-              alt={item.altText}
-              className={[
-                "bg-[var(--color-bg-accent)]",
-                "rounded-md",
-                "object-contain",
-                "aspect-video",
-                "w-[var(--size)]",
-                "p-[calc(var(--size)/10)]",
-                direction === "vertical" &&
-                  "aspect-square w-[calc(var(--size)/1.5)] p-[calc(var(--size)/6)]",
-              ]
-                .filter(Boolean)
-                .join(" ")}
-            />
-          ))}
-        </div>
-        <div
-          aria-hidden="true"
-          className={[
-            "flex-shrink-0",
-            "flex",
-            "items-center",
-            "justify-around",
-            "gap-[calc(var(--size)/14)]",
-            "min-w-full",
-            "animate-scrollX",
-            "reverse-x",
-            direction === "vertical" &&
-              "flex-col min-h-full animate-scrollY reverse-x",
-          ]
-            .filter(Boolean)
-            .join(" ")}
-        >
-          {items.map((item, idx) => (
-            <img
-              key={`dup2-${idx}`}
-              src={item.imgUrl}
-              alt={item.altText}
-              className={[
-                "bg-[var(--color-bg-accent)]",
                 "rounded-md",
                 "object-contain",
                 "aspect-video",
@@ -230,4 +133,3 @@ const LogoWall: FC<LogoWallProps> = ({
 };
 
 export default LogoWall;
-

@@ -26,7 +26,10 @@ export default function About() {
               Passionate about innovation.
             </p>
             <div className="flex gap-4 justify-center lg:justify-start">
-              <Button className="cursor-default">Hire me</Button>
+              <Button className="cursor-default">
+              <a href="#contact" className="cursor-default">
+                Hire me
+                </a></Button>
               <Button
                 variant="outline"
                 className="cursor-default"
