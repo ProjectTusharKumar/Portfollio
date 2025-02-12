@@ -1,37 +1,34 @@
-"use client";
+"use client"
 
-import { useState, useEffect } from "react";
-import { Moon, Sun, Menu } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { useTheme } from "next-themes";
+import { useTheme } from "next-themes"
+import { Moon, Sun, Menu } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import Image from "next/image"
 
-const navItems = ["Home", "About", "Skills", "Portfolio", "Contact"];
+const navItems = ["Home", "About", "Skills", "Portfolio", "Contact"]
 
 export default function Header() {
-  const { setTheme, resolvedTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => setMounted(true), []);
-
-  if (!mounted) return null; // Prevent SSR issues
+  const { theme, setTheme } = useTheme()
 
   return (
     <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
         <h1 className="text-xl sm:text-2xl font-bold">
-          <a href="#" className="cursor-default">
+          <a href="#" className="cursor-default flex items-center">
+            <Image src="/images/logo.jpg" alt="Tushar Kumar" width={40} height={40} className="mr-2 rounded-full" />
             Tushar<span className="text-primary">.</span>
           </a>
         </h1>
+
         <div className="flex items-center gap-2 sm:gap-4">
           <Button
             variant="ghost"
             size="icon"
-            onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
-            className="cursor-pointer"
+            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+            className="cursor-default"
           >
-            {resolvedTheme === "dark" ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+            {theme === "dark" ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
           </Button>
 
           <nav className="hidden md:flex items-center space-x-4 lg:space-x-6 text-sm font-medium">
@@ -39,7 +36,7 @@ export default function Header() {
               <a
                 key={item}
                 href={`#${item.toLowerCase()}`}
-                className="transition-colors hover:text-primary cursor-pointer"
+                className="transition-colors hover:text-primary cursor-default"
               >
                 {item}
               </a>
@@ -48,7 +45,7 @@ export default function Header() {
 
           <Sheet>
             <SheetTrigger asChild>
-              <Button variant="ghost" className="md:hidden cursor-pointer p-0" size="icon">
+              <Button variant="ghost" className="md:hidden cursor-default p-0" size="icon">
                 <Menu className="h-5 w-5" />
                 <span className="sr-only">Toggle menu</span>
               </Button>
@@ -59,7 +56,7 @@ export default function Header() {
                   <a
                     key={item}
                     href={`#${item.toLowerCase()}`}
-                    className="text-lg font-medium transition-colors hover:text-primary cursor-pointer"
+                    className="text-lg font-medium transition-colors hover:text-primary cursor-default"
                   >
                     {item}
                   </a>
@@ -70,5 +67,6 @@ export default function Header() {
         </div>
       </div>
     </header>
-  );
+  )
 }
+

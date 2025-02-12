@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button"
 import RotatingText from '@/components/framotion/rotatingtext'
-import { Facebook, Twitter, Linkedin } from "lucide-react"
+import { Mail, Github, Linkedin } from "lucide-react"
 import Image from "next/image"
 
 
@@ -44,11 +44,16 @@ export default function Hero() {
         </div>
       </div>
       <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 lg:left-10 lg:translate-x-0 flex lg:flex-col gap-4 mt-8 lg:mt-0">
-        {[Facebook, Twitter, Linkedin].map((Icon, index) => (
-          <a key={index} href="#" className="text-muted-foreground hover:text-primary transition-colors cursor-default">
-            <Icon className="h-6 w-6" />
-          </a>
-        ))}
+      <a href="https://www.linkedin.com/in/tus4ar-kumar" className="text-muted-foreground hover:text-primary transition-colors cursor-default">
+          <Linkedin className="h-6 w-6" />
+        </a>
+        <a href="https://github.com/ProjectTusharKumar" className="text-muted-foreground hover:text-primary transition-colors cursor-default">
+          <Github className="h-6 w-6" />
+        </a>
+        <a href="mailto:itstusharkumar15@gmail.com" className="text-muted-foreground hover:text-primary transition-colors cursor-default">
+          <Mail className="h-6 w-6" />
+        </a>
+        
       </div>
       <a
         href="#stats"
