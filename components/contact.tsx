@@ -5,7 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin } from "lucide-react";
+import { Mail, Phone, MapPin, Github, Linkedin } from "lucide-react";
 import emailjs from "emailjs-com";
 
 export default function Contact() {
@@ -60,9 +60,9 @@ export default function Contact() {
               <CardContent className="p-6 space-y-4">
                 <div className="flex items-center gap-4">
                   <Mail className="text-primary" />
-                  <span className="text-sm sm:text-base">
+                  <a href="mailto:itstusharkumar15@gmail.com" className="text-sm sm:text-base text-muted-foreground hover:text-primary transition-colors">
                     itstusharkumar15@gmail.com
-                  </span>
+                  </a>
                 </div>
                 <div className="flex items-center gap-4">
                   <Phone className="text-primary" />
@@ -73,15 +73,24 @@ export default function Contact() {
                   <span className="text-sm sm:text-base">Mohali, India</span>
                 </div>
                 <div className="flex gap-4 mt-4">
-                  {[Facebook, Twitter, Linkedin].map((Icon, index) => (
-                    <a
-                      key={index}
-                      href="#"
-                      className="text-muted-foreground hover:text-primary transition-colors cursor-default"
-                    >
-                      <Icon className="h-5 w-5 sm:h-6 sm:w-6" />
-                    </a>
-                  ))}
+                  <a
+                    href="https://www.linkedin.com/in/tus4ar-kumar"
+                    className="text-muted-foreground hover:text-primary transition-colors cursor-default"
+                  >
+                    <Linkedin className="h-5 w-5 sm:h-6 sm:w-6" />
+                  </a>
+                  <a
+                    href="https://github.com/ProjectTusharKumar"
+                    className="text-muted-foreground hover:text-primary transition-colors cursor-default"
+                  >
+                    <Github className="h-5 w-5 sm:h-6 sm:w-6" />
+                  </a>
+                  <a
+                    href="mailto:itstusharkumar15@gmail.com"
+                    className="text-muted-foreground hover:text-primary transition-colors cursor-default"
+                  >
+                    <Mail className="h-5 w-5 sm:h-6 sm:w-6" />
+                  </a>
                 </div>
               </CardContent>
             </Card>
