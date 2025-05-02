@@ -33,7 +33,7 @@ export default function About() {
               <Button
                 variant="outline"
                 className="cursor-default"
-                onClick={() => window.open("https://raw.githubusercontent.com/ProjectTusharKumar/svg/refs/heads/main/Tushar_Resume.pdf", "_blank")}
+                onClick={() => window.open("https://raw.githubusercontent.com/ProjectTusharKumar/svg/refs/heads/main/Tushar Kumar Resume.pdf", "_blank")}
               >
                 Download CV
               </Button>
