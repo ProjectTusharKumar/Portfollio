@@ -11,7 +11,7 @@ export default function About() {
         <div className="grid gap-8 lg:grid-cols-2 items-center">
           <div className="order-2 lg:order-1">
             <Image
-              src="https://raw.githubusercontent.com/ProjectTusharKumar/svg/refs/heads/main/second_img.png"
+              src="/images/second_img.png"
               alt="About me"
               className="w-full h-auto rounded-lg max-w-[400px] mx-auto"
               width={400}

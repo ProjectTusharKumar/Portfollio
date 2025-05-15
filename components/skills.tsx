@@ -12,35 +12,35 @@ interface LogoItem {
   altText: string;
 }
 const skills : LogoItem[] = [
-  { name: "ReactJs", imgUrl: "https://raw.githubusercontent.com/ProjectTusharKumar/svg/refs/heads/main/reactjs.svg" , altText: "ReactJs"},
-  { name: "NodeJs", imgUrl: "https://raw.githubusercontent.com/ProjectTusharKumar/svg/refs/heads/main/node.svg" , altText: "NodeJs"},
-  { name: "MongoDB", imgUrl: "https://raw.githubusercontent.com/ProjectTusharKumar/svg/refs/heads/main/mongodb.svg" , altText: "MongoDB"},
-  { name: "Express.js", imgUrl: "https://raw.githubusercontent.com/ProjectTusharKumar/svg/refs/heads/main/express.svg" , altText: "Express.js"},
-  { name: "Redux", imgUrl: "https://raw.githubusercontent.com/ProjectTusharKumar/svg/refs/heads/main/redux.svg" , altText: "Redux"},
-  { name: "TypeScript", imgUrl: "https://raw.githubusercontent.com/ProjectTusharKumar/svg/refs/heads/main/typescript.svg", altText: "TypeScript" },
-  { name: "HTML5", imgUrl: "https://raw.githubusercontent.com/ProjectTusharKumar/svg/refs/heads/main/html.svg", altText: "HTML5" },
-  { name: "BootStrap", imgUrl: "https://raw.githubusercontent.com/ProjectTusharKumar/svg/refs/heads/main/bootstrap.svg", altText: "BootStrap" },
-  { name: "Tailwind Css", imgUrl: "https://raw.githubusercontent.com/ProjectTusharKumar/svg/refs/heads/main/tailwind.svg", altText: "Tailwind Css" },
-  { name: "JavaScript", imgUrl: "https://raw.githubusercontent.com/ProjectTusharKumar/svg/refs/heads/main/javascript.svg", altText: "JavaScript" },
-  { name: "JWT", imgUrl: "https://raw.githubusercontent.com/ProjectTusharKumar/svg/refs/heads/main/jwt.svg", altText: "JWT" },
-  { name: "RESTful API", imgUrl: "https://raw.githubusercontent.com/ProjectTusharKumar/svg/refs/heads/main/api.svg", altText: "RESTful API" },
-  { name: "Python", imgUrl: "https://raw.githubusercontent.com/ProjectTusharKumar/svg/refs/heads/main/python.svg", altText: "Python" },
-  { name: "Django", imgUrl: "https://raw.githubusercontent.com/ProjectTusharKumar/svg/refs/heads/main/django.svg", altText: "Django" },
-  { name: "My SQL", imgUrl: "https://raw.githubusercontent.com/ProjectTusharKumar/svg/refs/heads/main/mysql.svg", altText: "My SQL" },
-]
+  { name: "ReactJs", imgUrl: "/images/reactjs.svg", altText: "ReactJs" },
+  { name: "NodeJs", imgUrl: "/images/node.svg", altText: "NodeJs" },
+  { name: "MongoDB", imgUrl: "/images/mongodb.svg", altText: "MongoDB" },
+  { name: "Express.js", imgUrl: "/images/express.svg", altText: "Express.js" },
+  { name: "Redux", imgUrl: "/images/redux.svg", altText: "Redux" },
+  { name: "TypeScript", imgUrl: "/images/typescript.svg", altText: "TypeScript" },
+  { name: "HTML5", imgUrl: "/images/html.svg", altText: "HTML5" },
+  { name: "BootStrap", imgUrl: "/images/bootstrap.svg", altText: "BootStrap" },
+  { name: "Tailwind Css", imgUrl: "/images/tailwind.svg", altText: "Tailwind Css" },
+  { name: "JavaScript", imgUrl: "/images/javascript.svg", altText: "JavaScript" },
+  { name: "JWT", imgUrl: "/images/jwt.svg", altText: "JWT" },
+  { name: "RESTful API", imgUrl: "/images/api.svg", altText: "RESTful API" },
+  { name: "Python", imgUrl: "/images/python.svg", altText: "Python" },
+  { name: "Django", imgUrl: "/images/django.svg", altText: "Django" },
+  { name: "My SQL", imgUrl: "/images/mysql.svg", altText: "My SQL" },
+];
 
 const tools : LogoItem[] = [
-  { name: "Git", imgUrl: "https://raw.githubusercontent.com/ProjectTusharKumar/svg/refs/heads/main/git.svg", altText: "Git" },
-  { name: "GitHub", imgUrl: "https://raw.githubusercontent.com/ProjectTusharKumar/svg/refs/heads/main/github.svg", altText: "GitHub" },
-  { name: "Postman", imgUrl: "https://raw.githubusercontent.com/ProjectTusharKumar/svg/refs/heads/main/postman.svg", altText: "Postman" },
-  { name: "VS Code", imgUrl: "https://raw.githubusercontent.com/ProjectTusharKumar/svg/refs/heads/main/vscode.svg" , altText: "VS Code"},
-  { name: "NextJS", imgUrl: "https://raw.githubusercontent.com/ProjectTusharKumar/svg/refs/heads/main/nextjs.svg" , altText: "NextJS"},
-  { name: "npm", imgUrl: "https://raw.githubusercontent.com/ProjectTusharKumar/svg/refs/heads/main/npm.svg" , altText: "npm"},
-  { name: "ChatGPT", imgUrl: "https://raw.githubusercontent.com/ProjectTusharKumar/svg/refs/heads/main/chatgpt.svg" , altText: "ChatGPT"},
-  { name: "AWS", imgUrl: "https://raw.githubusercontent.com/ProjectTusharKumar/svg/refs/heads/main/aws.svg" , altText: "AWS"},
-  { name: "Hugging Face", imgUrl: "https://raw.githubusercontent.com/ProjectTusharKumar/svg/refs/heads/main/huggingface.svg", altText: "Hugging Face" },
-  { name: "Docker", imgUrl: "https://raw.githubusercontent.com/ProjectTusharKumar/svg/refs/heads/main/docker.svg", altText: "Docker" },
-]
+  { name: "Git", imgUrl: "/images/git.svg", altText: "Git" },
+  { name: "GitHub", imgUrl: "/images/github.svg", altText: "GitHub" },
+  { name: "Postman", imgUrl: "/images/postman.svg", altText: "Postman" },
+  { name: "VS Code", imgUrl: "/images/vscode.svg", altText: "VS Code" },
+  { name: "NextJS", imgUrl: "/images/nextjs.svg", altText: "NextJS" },
+  { name: "npm", imgUrl: "/images/npm.svg", altText: "npm" },
+  { name: "ChatGPT", imgUrl: "/images/chatgpt.svg", altText: "ChatGPT" },
+  { name: "AWS", imgUrl: "/images/aws.svg", altText: "AWS" },
+  { name: "Hugging Face", imgUrl: "/images/huggingface.svg", altText: "Hugging Face" },
+  { name: "Docker", imgUrl: "/images/docker.svg", altText: "Docker" },
+];
 
 
 export default function Skills() {
